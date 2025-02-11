@@ -47,7 +47,7 @@
                     case "*":
                         risultato = risultato*Number(numero);
                         numero="";
-                        displau.innerHTML = "";
+                        displau.innerHTML = 0;
                         break;  
                 }
                 count++;
@@ -64,12 +64,14 @@
             numero="";
             risultato= 0;
             displau.innerHTML = 0;
+            count = 0;
         }
         function mostra() {
             operazione(oper);
             displau.innerHTML= risultato;
             numero="";
             risultato= 0;
+            count = 0;
         }
     </script>
 </head>
