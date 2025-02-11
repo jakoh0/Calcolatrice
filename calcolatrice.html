@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let count=0;
+        let numero="";
+        let risultato= 0;
+        let oper = "";
+        function comporre(valore){
+           
+            if(numero.length!=0 || valore != 0){
+                numero= numero+valore; 
+                displau.innerHTML = numero;
+            }
+                
+            
+            
+            
+        }
+        function stampa(valore){
+            let a = valore;
+            displau.innerHTML = a;
+        }
+        function operazione(opera){
+            oper = opera;
+            if(count>=1){
+                switch (opera){
+                    case "+":
+                        risultato = risultato+Number(numero);
+                        displau.innerHTML=0;
+                        numero="";
+                        break;
+                    case "-":
+                        risultato = risultato-Number(numero);
+                        numero="";
+                        displau.innerHTML=0;
+                        break;
+                    case "/":
+                        risultato = risultato/Number(numero);
+                        numero="";
+                        displau.innerHTML = 0;
+                        break;
+                    case "*":
+                        risultato = risultato*Number(numero);
+                        numero="";
+                        displau.innerHTML = "";
+                        break;  
+                }
+                count++;
+            }
+            else{
+                risultato = Number(numero);
+                numero = "";
+                displau.innerHTML=0 ;
+                count++;
+            }
+            
+        }
+        function resetta(){
+            numero="";
+            risultato= 0;
+            displau.innerHTML = 0;
+        }
+        function mostra() {
+            operazione(oper);
+            displau.innerHTML= risultato;
+            numero="";
+            risultato= 0;
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="displau">0            
+        </div>
+        <div class="bottoni">
+            <div>
+                <button onclick="comporre('7')">7</button>
+                <button onclick="comporre('8')">8</button>
+                <button onclick="comporre('9')">9</button>
+                <button onclick="operazione('+')">+</button>
+            </div>
+            <div>
+                <button onclick="comporre('4')">4</button>
+                <button onclick="comporre('5')">5</button>
+                <button onclick="comporre('6')">6</button>
+                <button onclick="operazione('-')">-</button>
+            </div>
+            <div>
+                <button onclick="comporre('1')">1</button>
+                <button onclick="comporre('2')">2</button>
+                <button onclick="comporre('3')">3</button>
+                <button onclick="operazione('/')">/</button>
+            </div>
+            <div>
+                <button onclick="comporre('0')">0</button>
+                <button onclick="mostra()">=</button>
+                <button onclick="resetta()">CE</button>
+                <button onclick="operazione('*')">*</button>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</body>
+</html>

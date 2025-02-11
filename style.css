@@ -1,0 +1,61 @@
+/* Impostazioni di base per il corpo della calcolatrice */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Contenitore principale della calcolatrice */
+.calculator {
+    width:25%;
+    height: 30%;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px rgba(74, 71, 71, 0.387);
+}
+.display{
+    display:flex;
+    align-items: end;
+    justify-content: end;
+    font-size:20px;
+    background-color: black;
+    border-radius: 10px;
+    height: 50px;
+    color: white;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    box-shadow: 2.5px 2.5px rgba(0, 0, 0, 0.387);
+}
+.bottoni{
+
+    margin-top: 5%;
+
+}
+div{
+    margin-top: 5px;
+}
+button{
+
+    width: 24%;
+    height: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #fe8c00;
+    border-radius: 10px;
+    border-color: transparent;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.387);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+button:hover{
+    cursor: pointer;
+}
+button:active{
+    transform: scale(0.9);
+}
+
+
